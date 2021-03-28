@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+main {
+    flex: auto;
+}
+
+section {
+    margin: 10px auto;
+    padding: 5px 10px;
+}
+#currentTrip{
+    background-color: #f2e1c7;
+    display: none;
+}
+@media (min-width: 568px) and  (max-width: 767px){
+    #currentTrip{
+        
+        position: absolute;
+        top: 55%;
+        right: 2.5%;
+        width: 95%;
+        
+       
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+    #currentTrip{
+        background-color: #f2e1c7;
+        position: absolute;
+        top: 25%;
+        right: 5%;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1200px){
+    section {
+        width: 80%;
+        margin: 10px auto;
+        padding: 5px 10px;
+    }
+    #currentTrip{
+        background-color: #f2e1c7;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        width: 80%;
+    }
+}

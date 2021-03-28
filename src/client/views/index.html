@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Dancing+Script:wght@400;600&display=swap|Quicksand&display=swap|Merriweather&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="title-container">
+                <div class="title">
+                    <h1>Travel Planner</h1>
+                </div>
+            </div>
+            <div class="form-container">
+                <form>
+                    <div class="location">
+                        <label for="location">Location:</label><br>
+                        <input type="text" id="location" name="location" placeholder="Enter a city name">
+                        <div id="errorMsg"></div>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="departure">
+                        <label for="departure">Departure:</label><br>
+                        <input type="date" id="departure" name="departure-date" value="yyyy-mm-dd" min="2021-03-18"
+                            max="2022-03-25">
+                    </div>
+                    <div class="empty"></div>
+                    <div class="return">
+                        <label for="return">Return:</label><br>
+                        <input type="date" id="return" name="return-date" value="yyyy-mm-dd" min="2021-03-19"
+                            max="2022-03-26">
+                    </div>
+                    <div class="empty"></div>
+                    <button class="search" type="button" name="" value="submit"
+                        onclick="return Client.search(event)">Search</button>
+                </form>
+            </div>
+        </div>
+        <div id="hero"></div>
+        <div class="quote">
+            <h2>Lets find some beautiful place to get lost.</h2>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div id="currentTrip">
+                <div class="tripTitle">
+                    <div class="sectionTitle">
+                        <h2>My Trip</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardContentLeft">
+                        <div id="image"></div>
+                    </div>
+                    <div class="cardContentRight">
+                        <div id="city"></div>
+                        <div class="dateInfo">
+                            <div id="dDate"></div>
+                            <div id="rDate"></div>
+                        </div>
+                        <div class="weatherTitle">
+                            <h2>Typical weather for that date</h2>
+                        </div>
+                        <div id="weatherData">
+                            <div id="temp"></div>
+                            <div id="description"></div>
+                            <div id="content"></div>
+                        </div>
+                        <div class="tripButtons">
+                            <button id="saveTrip" type="button" name="" value="submit" onclick="">Save</button>
+                            <button id="removeTrip" type="button" name="" value="submit">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="savedTripContainer">
+            <div >
+                <h2>Saved Trips</h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Travel Planner, Udacity Capstone Project</p> <br><p> by Sabrina Roestenburg</p>
+    </footer>
+    <script>
+        /*  // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+          */
+    </script>
+</body>
+
+</html>

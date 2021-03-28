@@ -1,0 +1,645 @@
+@media only screen and (max-width: 567px){
+    .tripTitle{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+    }
+    .sectionTitle{
+        display: flex;
+        flex-direction: column;
+        border-radius: 50%;
+        background: #38747e;
+        width:150px;
+        height: 150px;
+        position: absolute;
+        left: 30%;
+        justify-content: center;
+        align-items: center;
+        h2{
+            color: #ffffff;
+            font-size: 35px;
+            
+        }
+        
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cardContentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .cardContentRight{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    #city{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto;
+        h2{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            color: #022025;
+            font-size: 18px;
+        }
+    }
+    
+    .dateInfo,
+    .tripButtons{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        
+    }
+    
+    #dDate,
+    #rDate{
+        display: flex;
+        flex-direction: column ;
+        width: 45%;
+        margin: auto;
+        padding: 5px 30px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #022025;
+        border: 1px solid #043138;
+        
+        background-color: #ffffff;
+    }
+    
+    #saveTrip{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        background-color: #043138;
+        color: #ffffff;
+        margin: auto;
+        padding: 10px 25px;
+        border: 2px solid white;
+    }
+    
+    #removeTrip{
+        display: flex;
+        flex-direction: column ;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        color: #043138;
+        background: #ffffff;
+        border: 2px solid #043138;
+        margin: auto;
+        padding: 10px 25px;
+    }
+    #saveTrip:hover,
+    #removeTrip:hover{
+        background-color: #c7d8f2;
+        color: #043138;
+    }
+    
+    .imageSize{
+        width: 100%;
+        height: 250px;
+        
+    }
+    .weatherTitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        h2{
+            color:#38747e;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+
+    #weatherData{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 25px;
+        text-align: center;     
+    }
+
+    #temp{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        color:#043138;
+        font-weight: 800;
+        font-size: 40px;
+    }
+    
+    #description{
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto 20px;
+        justify-content: center;
+        p{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+        }
+    }
+
+}
+
+@media (min-width: 568px) and  (max-width: 767px){
+
+    .tripTitle{
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+    }
+    .sectionTitle{
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background: #38747e;
+        width: 300px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        h2{
+            color: #ffffff;
+            font-size: 35px;
+            
+        }
+        
+    }
+    .card{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .cardContentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardContentRight{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        
+    }
+
+    #city{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto;
+        h2{
+            display: flex;
+            flex-direction: row;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            color: #022025;
+            font-size: 18px;
+        }
+    }
+    
+    .dateInfo,
+    .tripButtons{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        
+    }
+    
+    #dDate,
+    #rDate{
+        display: flex;
+        flex-direction: column ;
+        width: 47%;
+        margin: auto;
+        padding: 2px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #022025;
+        border: 1px solid #043138;
+        background-color: #ffffff;
+    }
+    
+    .weatherTitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        h2{
+            color:#38747e;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+
+    #weatherData{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 25px;
+        text-align: center;     
+    }
+
+    #temp{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        color:#043138;
+        font-weight: 800;
+        font-size: 40px;
+    }
+    
+    #description{
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto 20px;
+        justify-content: center;
+        p{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+        }
+    }
+
+    #saveTrip{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        background-color: #043138;
+        color: #ffffff;
+        margin: auto;
+        padding: 10px 25px;
+        border: 2px solid white;
+    }
+    
+    #removeTrip{
+        display: flex;
+        flex-direction: column ;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        color: #043138;
+        background: #ffffff;
+        border: 2px solid #043138;
+        margin: auto;
+        padding: 10px 25px;
+    }
+    #saveTrip:hover,
+    #removeTrip:hover{
+        background-color: #c7d8f2;
+        color: #043138;
+    }
+    
+    #image{
+        display: flex;
+        justify-content: center;
+    }
+
+    .imageSize{
+        width: 80%;
+        height: 250px;
+          
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 1199px){
+    .tripTitle{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .sectionTitle{
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background: #38747e;
+        width: 400px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        h2{
+            color: #ffffff;
+            font-size: 25px;
+            
+        }
+        
+    }
+    .card{
+        display: flex;
+        flex-direction: row;
+        padding:  10px 15px 25px 15px;
+    }
+    
+    .cardContentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardContentRight{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        justify-content: center;
+        
+    }
+    #city{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto;
+        h2{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: #022025;
+        }
+    }
+    
+    .dateInfo,
+    .tripButtons{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        
+    }
+    
+    #dDate,
+    #rDate{
+        display: flex;
+        flex-direction: column ;
+        width: 45%;
+        margin: auto;
+        padding: 2px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #022025;
+        border: 1px solid #043138;
+        border-radius: 40px;
+        background-color: #ffffff;
+    }
+
+    .weatherTitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        h2{
+            color:#38747e;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+
+    #weatherData{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 25px;
+        text-align: center;     
+    }
+
+    #temp{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            color: #022025;
+        }
+    }
+    
+    #saveTrip{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        background-color: #043138;
+        color: #ffffff;
+        margin: auto;
+        padding: 10px 25px;
+        border: 2px solid white;
+    }
+    
+    #removeTrip{
+        display: flex;
+        flex-direction: column ;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        color: #043138;
+        background: #ffffff;
+        border: 2px solid #043138;
+        margin: auto;
+        padding: 10px 25px;
+    }
+    #saveTrip:hover,
+    #removeTrip:hover{
+        background-color: #c7d8f2;
+        color: #043138;
+    }
+    
+    #image{
+        display: flex;
+        justify-content: center;
+    }
+    .imageSize{
+        width: 90%;
+        height: 250px;
+        
+    } 
+}
+@media (min-width: 1200px){
+    .tripTitle{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .sectionTitle{
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background: #38747e;
+        width: 300px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        h2{
+            color: #ffffff;
+            font-size: 35px;
+            
+        }
+        
+    }
+    .card{
+        display: flex;
+        flex-direction: row;
+        padding:  10px 15px 25px 15px;
+    }
+    
+    .cardContentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    .cardContentRight{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        
+    }
+    #city{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto;
+        h2{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            color: #022025;
+        }
+    }
+    
+    .dateInfo,
+    .tripButtons{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        
+    }
+    
+    #dDate,
+    #rDate{
+        display: flex;
+        flex-direction: column ;
+        width: 40%;
+        margin: auto;
+        padding: 5px 20px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #022025;
+        border: 1px solid #043138;
+        border-radius: 40px;
+        background-color: #ffffff;
+    }
+    .weatherTitle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        h2{
+            color:#38747e;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    #weatherData{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto 25px;
+        text-align: center;     
+    }
+    #temp{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            color: #022025;
+        }
+    }
+
+    #description{
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto 30px;
+        justify-content: center;
+        p{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+        }
+    }
+    #saveTrip{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        background-color: #043138;
+        color: #ffffff;
+        margin: auto;
+        padding: 10px 25px;
+        border: 2px solid white;
+    }
+    
+    #removeTrip{
+        display: flex;
+        flex-direction: column ;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        color: #043138;
+        background: #ffffff;
+        border: 2px solid #043138;
+        margin: auto;
+        padding: 10px 25px;
+    }
+    #saveTrip:hover,
+    #removeTrip:hover{
+        background-color: #c7d8f2;
+        color: #043138;
+    }
+    
+    #image{
+        display: flex;
+        justify-content: center;
+    }
+    .imageSize{
+        width: 80%;
+        height: 350px;
+          
+    } 
+}
+

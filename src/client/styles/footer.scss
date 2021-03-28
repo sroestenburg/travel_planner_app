@@ -1,0 +1,15 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #A8A8A8;
+    p{
+        color: #414141;
+        font-family: 'Cinzel', serif;
+        text-align: center;
+        font-size: 15px;
+        padding: 5px;
+    }
+}
