@@ -111,8 +111,6 @@ function getSavedTrips() {
     return savedTrips;
 }
 
-//document.getElementById('saveTrip').addEventListener('click', saveMyTrip);
-
 function saveMyTrip() {
     let myTrip = localStorage.getItem("tempTrip")
     myTrip = JSON.parse(myTrip);
