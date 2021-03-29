@@ -1,25 +1,343 @@
-#savedTripContainer{
-    display: flex;
-    flex-direction: column;   
-}
-.savedTripTitleContainer{
-    display: flex;
-    flex-direction: row;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-}
-.savedTripTitle{
-    display: flex;
-    flex-direction: column;
-    border-radius: 40px;
-    background: #38747e;
-    width: 400px;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-        h2{
-            color: #ffffff;
-            font-size: 35px;  
+@media only screen and (max-width: 567px){
+    #savedTripContainer{
+        display: flex;
+        flex-direction: column;   
+    }
+    .savedTripTitleContainer{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .savedTripTitle{
+        display: flex;
+        flex-direction: column;
+        border-radius: 40px;
+        background: #38747e;
+        width: 400px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+            h2{
+                color: #ffffff;
+                font-size: 35px;  
+            }
+    }
+    
+    .savedTripCard{
+        display: flex;
+        flex-direction: column;
+        background-color: #e0e8f5;
+        margin: 10px auto 20px;
+    }
+
+    .savedTripCardContentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .savedTripCardContentRight{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #destination{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto;
+        h3{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            color: #022025;
+            font-size: 18px;
         }
+    }
+    .tripDateInfo{
+        display: flex;
+        flex-direction: row;
+        margin: 5px auto 15px;
+    }
+    #departing,
+    #returning{
+        display: flex;
+        flex-direction: column ;
+        width: 45%;
+        margin: auto;
+        padding: 5px 30px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #022025;
+        border: 1px solid #043138;
+        background-color: #ffffff;
+    }
+
+    #photo{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+@media (min-width: 568px) and  (max-width: 767px){
+    .savedTripTitleContainer{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin: 5px auto 20px;
+    }
+    .savedTripTitle{
+        display: flex;
+        flex-direction: column;
+        border-radius: 40px;
+        background: #38747e;
+        width: 400px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+            h2{
+                color: #ffffff;
+                font-size: 35px;  
+            }
+    }
+    #savedTripCardContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly; 
+    }
+    .savedTripCard{
+        display: flex;
+        flex-direction: column;
+        background-color: #e0e8f5;
+        margin: 10px auto 20px;
+    }
+
+    .savedTripCardContentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .savedTripCardContentRight{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2px 5px;
+    }
+
+    #destination{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto;
+        h3{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            color: #022025;
+            font-size: 18px;
+        }
+    }
+    .tripDateInfo{
+        display: flex;
+        flex-direction: column;
+    }
+    #departing,
+    #returning{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 5px auto;
+        padding: 5px 30px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #022025;
+        border: 1px solid #043138;
+        background-color: #ffffff;
+    }
+
+    #photo{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px){
+    .savedTripTitleContainer{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin: 5px auto 20px;
+    }
+    .savedTripTitle{
+        display: flex;
+        flex-direction: column;
+        border-radius: 40px;
+        background: #38747e;
+        width: 400px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+            h2{
+                color: #ffffff;
+                font-size: 35px;  
+            }
+    }
+    #savedTripCardContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly; 
+    }
+    .savedTripCard{
+        display: flex;
+        flex-direction: column;
+        background-color: #e0e8f5;
+        margin: 10px auto 20px;
+    }
+
+    .savedTripCardContentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .savedTripCardContentRight{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2px 5px;
+    }
+
+    #destination{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto;
+        h3{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            color: #022025;
+            font-size: 18px;
+        }
+    }
+    .tripDateInfo{
+        display: flex;
+        flex-direction: column;
+    }
+    #departing,
+    #returning{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 5px auto;
+        padding: 5px 30px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #022025;
+        border: 1px solid #043138;
+        background-color: #ffffff;
+    }
+
+    #photo{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+@media (min-width:1200px){
+    .savedTripTitleContainer{
+        display: flex;
+        flex-direction: row;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin: 5px auto 20px;
+    }
+    .savedTripTitle{
+        display: flex;
+        flex-direction: column;
+        border-radius: 40px;
+        background: #38747e;
+        width: 400px;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+            h2{
+                color: #ffffff;
+                font-size: 35px;  
+            }
+    }
+    #savedTripCardContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly; 
+    }
+    .savedTripCard{
+        display: flex;
+        flex-direction: column;
+        background-color: #e0e8f5;
+        margin: 10px auto 20px;
+    }
+
+    .savedTripCardContentLeft{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .savedTripCardContentRight{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2px 5px;
+    }
+
+    #destination{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin: 20px auto;
+        h3{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            color: #022025;
+            font-size: 18px;
+        }
+    }
+    .tripDateInfo{
+        display: flex;
+        flex-direction: column;
+    }
+    #departing,
+    #returning{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 5px auto;
+        padding: 5px 30px;
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #022025;
+        border: 1px solid #043138;
+        background-color: #ffffff;
+    }
+
+    #photo{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 }

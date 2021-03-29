@@ -1,13 +1,13 @@
 const iconPath = 'https://www.weatherbit.io/static/img/icons/'; 
 
- function isLocationValid(inputLocation) {
-     return inputLocation != null && inputLocation.trim() != '';
- }
+function isLocationValid(inputLocation) {
+    return inputLocation != null && inputLocation.trim() != '';
+}
 
- function isDateInputValid(inputDate) {
-     console.log(inputDate);
+function isDateInputValid(inputDate) {
+    console.log(inputDate);
     return inputDate != null && inputDate != '';
- }
+}
 
 function search(event) {
     event.preventDefault()
@@ -79,10 +79,7 @@ function displayWeatherData(data, input) {
     document.getElementById("rDate").innerHTML = `<p> Return: ${input.returnDate}</p>`;
     document.getElementById("temp").innerHTML = `<img src="${iconPath}${data.data[0].weather.icon}.png"></img><p>${Math.floor(data.data[0].temp)} &#8451</p>`;
     document.getElementById("description").innerHTML = `<p> ${data.data[0].weather.description}, feels like: ${Math.floor(data.data[0].app_temp)} &#8451 </p>`
-    //location.value = '';
-    //departureDate.value = '';
-    //returnDate.value = '';
-    
+  
 }
 
 function displayPixaBay(data, input) {
@@ -123,17 +120,30 @@ function saveMyTrip() {
     let mySavedTrips = getSavedTrips();
     mySavedTrips.push(myTrip);
     localStorage.setItem("savedTrips", JSON.stringify(mySavedTrips));
+    displaySavedTrips();
+ 
 }
 
 function displaySavedTrips() {
     let mySavedTrips = getSavedTrips();
     console.log(mySavedTrips);
-
-    document.getElementById("destination").innerHTML = `<h3> My ${mySavedTrips[0].total_days} day trip to:${mySavedTrips[0].location}</h3>`;
-    document.getElementById("departing").innerHTML = `<p> Departure: ${mySavedTrips[0].departureDate}</p>`;
-    document.getElementById("returning").innerHTML = `<p> Return: ${mySavedTrips[0].returnDate}</p>`;
-    document.getElementById("photo").innerHTML = `<img src="${mySavedTrips[0].previewURL}"></img>`
-
+    let content = "";
+    for(var i=0; i < mySavedTrips.length; i++){
+        content += `<div class="savedTripCard">
+        <div class="savedTripCardContentLeft">
+            <div id="photo"><img src="${mySavedTrips[i].previewURL}"</src></div>
+        </div>
+        <div class="savedTripCardContentRight">
+            <div id="destination"><h3> My ${mySavedTrips[i].total_days} day trip to: ${mySavedTrips[i].location}</h3></div>
+            <div class="tripDateInfo">
+                <div id="departing"><p> Departure: ${mySavedTrips[i].departureDate}</p></div>
+                <div id="returning"><p> Return: ${mySavedTrips[i].returnDate}</p></div>
+            </div>
+        </div>
+    </div>`
+    }
+    document.getElementById("savedTripCardContainer").innerHTML = content;
+    
 }
 
 displaySavedTrips();
