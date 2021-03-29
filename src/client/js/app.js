@@ -111,7 +111,7 @@ function getSavedTrips() {
     return savedTrips;
 }
 
-document.getElementById('saveTrip').addEventListener('click', saveMyTrip);
+//document.getElementById('saveTrip').addEventListener('click', saveMyTrip);
 
 function saveMyTrip() {
     let myTrip = localStorage.getItem("tempTrip")
@@ -142,11 +142,14 @@ function displaySavedTrips() {
         </div>
     </div>`
     }
-    document.getElementById("savedTripCardContainer").innerHTML = content;
-    
+
+    let myTrips = document.getElementById("savedTripCardContainer");
+    if (myTrips != null){
+        myTrips.innerHTML = content;
+    }    
 }
 
 displaySavedTrips();
 
-export { search };
+export { search, isLocationValid, saveMyTrip};
 

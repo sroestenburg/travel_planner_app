@@ -1,6 +1,8 @@
-# Evaluating a news article with Natural Language Processing project
+# Travel planner app
 
-For this project I used webpack to bundle all my dependancies and created a news article website with natural language processing.
+This project uses 3 different API's, ```Geonames``` is used to get the ```Latitude and Longitud``` for the location entered by the user, the ```lat and lng values``` are then used to generate the weatherforecast using the ```Weatherbit api```, and at last the ```pixabay api``` is used to generate an image from the location entered.
+
+For this project I used webpack to bundle all my dependancies and created a travel planner app.
 
 ## Install webpack
 
@@ -30,19 +32,29 @@ I first installed express, corse, bodyparser, and webpack with all necessary loa
   ```
 ## Setting up the API
 
-For this project I used the `meaningcloud Sentiment Analysi API`
+For this project I used 3 different API's
+* Geonames
+* Weatherbit
+* Pixabay
 
 ### Step 1: Signup for an API key
-You can find the API [here](https://www.meaningcloud.com/developer/sentiment-analysis). Once you create an account with MeaningCloud, you will be given a license key to start using the 
+
+I created an account for the Geonames api, Weatherbit api and Pixabay api
 
 
 ### Step 2: Environment Variables
-Next I declared the API key in the server.js file
+Next I declared the API s in the server.js file
 ```javascript
 // set API credentials
-const textApi = {
+const weatherApi ={
     application_key: process.env.API_KEY
 };
+const geoNames ={
+    username: process.env.GEONAMES_USER
+}
+const pixabay ={
+    key: process.env.KEY
+}
 ```
 ### Note
 ...but there's a problem with this. We are about to put our personal API keys into a file, but when we push, this file is going to be available PUBLICLY on Github. Private keys, visible publicly are never a good thing. So, we have to figure out a way to make that not happen. The way we will do that is with environment variables. Environment variables are pretty much like normal variables in that they have a name and hold a value, but these variables only belong to your system and won't be visible when you push to a different environment like Github.
@@ -73,10 +85,10 @@ console.log(`Your API key is ${process.env.API_KEY}`);
 - Tested that the server and form submission work, making sure to also handle error responses if the user input does not match API requirements.
 ```javascript
 function displayErrorMsg() {
-    let message = "<p>The URL is invalid. Make sure the URL is correct, and try again.</p>"
-    let errorMsg = document.getElementById("errorMsg");
-    errorMsg.innerHTML = message;
-};
+       let message = "<p>Please fill out location and/or select dates</p>"
+       let errorMsg = document.getElementById("errorMsg");
+        errorMsg.innerHTML = message;
+    };
 ```
 ## Added the setup for service workers. 
  * at the bottom of the html file:
@@ -104,11 +116,11 @@ function displayErrorMsg() {
 ## Test suite
 ### Installed the `jest` framework to run some unit tests
 ```javascript
- Test Suites: 2 passed, 2 total
- Tests:       6 passed, 6 total
- Snapshots:   0 total
- Time:        14.452 s
- Ran all test suites.
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        10.025 s
+Ran all test suites.
 ```
 
 ## Deploying

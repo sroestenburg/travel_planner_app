@@ -1,5 +1,6 @@
 import { search } from './js/app';
 import { hideMyTrip } from './js/listeners';
+import { saveMyTrip } from './js/app';
 
 
 import './styles/resets.scss';
@@ -16,5 +17,6 @@ document.getElementById('hero').jpg = image;
 
 export {
     search,
-    hideMyTrip
+    hideMyTrip,
+    saveMyTrip
 }
