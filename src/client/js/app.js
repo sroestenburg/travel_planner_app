@@ -1,15 +1,13 @@
-import { NULL } from "node-sass";
-
 const iconPath = 'https://www.weatherbit.io/static/img/icons/'; 
 
-// function isLocationValid(inputLocation) {
-//     return inputLocation != null && inputLocation.trim() != '';
-// }
+ function isLocationValid(inputLocation) {
+     return inputLocation != null && inputLocation.trim() != '';
+ }
 
-// function isDateInputValid(inputDate) {
-//     console.log(inputDate);
-//     return inputDate != null;
-// }
+ function isDateInputValid(inputDate) {
+     console.log(inputDate);
+    return inputDate != null && inputDate != '';
+ }
 
 function search(event) {
     event.preventDefault()
@@ -17,11 +15,18 @@ function search(event) {
     let location = document.getElementById('location');
     let departureDate = document.getElementById('departure');
     let returnDate= document.getElementById('return')
+    console.log(departureDate.value);
+    if (!isLocationValid(location.value) || !isDateInputValid(departureDate.value) || !isDateInputValid(returnDate.value) ) {
+         displayErrorMsg();
+         return;
+    }
 
-    // if (!isLocationValid(location.value) || !isDateInputValid(departureDate.value)) {
-    //     alert("Review your request");
-    //     return;
-    // }
+    function displayErrorMsg() {
+       let message = "<p>Please fill out location and/or select dates</p>"
+       let errorMsg = document.getElementById("errorMsg");
+        errorMsg.innerHTML = message;
+    };
+
     showMyTrip();
 
     let input = {
@@ -37,18 +42,8 @@ function search(event) {
     postData('/weatherData', input, displayWeatherData)
 
     let pixaData = { location: location.value }
-    postData('/pixabay', pixaData, displayPixaBay)
+    postData('/pixabay', input, displayPixaBay)
 };
-
-
-
-function displayErrorMsg() {
-    let message = "<p>Couldn't find location</p>"
-    let errorMsg = document.getElementById("errorMsg");
-    errorMsg.innerHTML = message;
-};
-
-
 
 // postData is going to be used to post any data to the server
 
@@ -75,18 +70,10 @@ function showMyTrip() {
     console.log("working")
     document.getElementById("currentTrip").style.display = 'block';
 }
-// Event listener to add function to existing HTML DOM element
-document.getElementById('removeTrip').addEventListener('click', hideMyTrip);
-
-/* Function called by event listener */
-function hideMyTrip() {
-    document.getElementById("currentTrip").style.display = 'none';
-}
-
 
 function displayWeatherData(data, input) {
     console.log(data);
-
+    
     document.getElementById("city").innerHTML = `<h2> My ${Math.round(input.total_days)} day trip to:${data.data[0].city_name}, ${data.data[0].country_code}</h2>`
     document.getElementById("dDate").innerHTML = `<p> Departure: ${input.departureDate}</p>`;
     document.getElementById("rDate").innerHTML = `<p> Return: ${input.returnDate}</p>`;
@@ -98,18 +85,58 @@ function displayWeatherData(data, input) {
     
 }
 
-function displayPixaBay(data) {
+function displayPixaBay(data, input) {
     console.log(data)
+    
     if (data.hits.length>=2) {
         document.getElementById("image").innerHTML = `<img class="imageSize" src="${data.hits[1].webformatURL}"></img>`;
+        input.previewURL = data.hits[0].previewURL;
     }
     else if (data.hits.length>0) {
         document.getElementById("image").innerHTML = `<img src="${data.hits[0].webformatURL}"></img>`;
+        input.previewURL = data.hits[0].previewURL;
+    }
+    saveTempTrip(input);
+}
+
+function saveTempTrip(myTrip){
+    localStorage.setItem("tempTrip", JSON.stringify(myTrip));
+}
+
+function getSavedTrips() {
+    let savedTrips = localStorage.getItem("savedTrips");
+    if (savedTrips != null){
+        savedTrips = JSON.parse(savedTrips);
     }
     else {
-
+        savedTrips = [];
     }
+    return savedTrips;
 }
+
+document.getElementById('saveTrip').addEventListener('click', saveMyTrip);
+
+function saveMyTrip() {
+    let myTrip = localStorage.getItem("tempTrip")
+    myTrip = JSON.parse(myTrip);
+    
+    let mySavedTrips = getSavedTrips();
+    mySavedTrips.push(myTrip);
+    localStorage.setItem("savedTrips", JSON.stringify(mySavedTrips));
+}
+
+function displaySavedTrips() {
+    let mySavedTrips = getSavedTrips();
+    console.log(mySavedTrips);
+
+    document.getElementById("destination").innerHTML = `<h3> My ${mySavedTrips[0].total_days} day trip to:${mySavedTrips[0].location}</h3>`;
+    document.getElementById("departing").innerHTML = `<p> Departure: ${mySavedTrips[0].departureDate}</p>`;
+    document.getElementById("returning").innerHTML = `<p> Return: ${mySavedTrips[0].returnDate}</p>`;
+    document.getElementById("photo").innerHTML = `<img src="${mySavedTrips[0].previewURL}"></img>`
+
+}
+
+displaySavedTrips();
 
 export { search };
 

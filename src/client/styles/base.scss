@@ -13,19 +13,18 @@ section {
     margin: 10px auto;
     padding: 5px 10px;
 }
+
 #currentTrip{
     background-color: #f2e1c7;
     display: none;
 }
+
 @media (min-width: 568px) and  (max-width: 767px){
     #currentTrip{
-        
         position: absolute;
         top: 55%;
         right: 2.5%;
         width: 95%;
-        
-       
     }
 }
 
@@ -45,6 +44,7 @@ section {
         margin: 10px auto;
         padding: 5px 10px;
     }
+    
     #currentTrip{
         background-color: #f2e1c7;
         position: absolute;

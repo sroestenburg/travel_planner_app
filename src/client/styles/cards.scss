@@ -4,6 +4,7 @@
         flex-direction: row;
         height: 100px;
     }
+
     .sectionTitle{
         display: flex;
         flex-direction: column;
@@ -17,11 +18,10 @@
         align-items: center;
         h2{
             color: #ffffff;
-            font-size: 35px;
-            
+            font-size: 35px;  
         }
-        
     }
+
     .card{
         display: flex;
         flex-direction: column;
@@ -32,12 +32,13 @@
         flex-direction: column;
         width: 100%;
     }
+
     .cardContentRight{
         display: flex;
         flex-direction: column;
-        width: 100%;
-        
+        width: 100%;    
     }
+
     #city{
         display: flex;
         flex-direction: row;
@@ -56,8 +57,7 @@
     .tripButtons{
             display: flex;
             flex-direction: row;
-            margin-bottom: 20px;
-        
+            margin-bottom: 20px;    
     }
     
     #dDate,
@@ -71,7 +71,6 @@
         font-family: 'Quicksand', sans-serif;
         color: #022025;
         border: 1px solid #043138;
-        
         background-color: #ffffff;
     }
     
@@ -100,6 +99,7 @@
         margin: auto;
         padding: 10px 25px;
     }
+
     #saveTrip:hover,
     #removeTrip:hover{
         background-color: #c7d8f2;
@@ -108,9 +108,9 @@
     
     .imageSize{
         width: 100%;
-        height: 250px;
-        
+        height: 250px;   
     }
+
     .weatherTitle{
         display: flex;
         flex-direction: row;
@@ -164,6 +164,7 @@
         justify-content: center;
         align-items: center;
     }
+
     .sectionTitle{
         display: flex;
         flex-direction: column;
@@ -175,11 +176,10 @@
         align-items: center;
         h2{
             color: #ffffff;
-            font-size: 35px;
-            
-        }
-        
+            font-size: 35px;    
+        }  
     }
+
     .card{
         display: flex;
         flex-direction: row;
@@ -196,8 +196,7 @@
     .cardContentRight{
         display: flex;
         flex-direction: column;
-        width: 60%;
-        
+        width: 60%;   
     }
 
     #city{
@@ -220,8 +219,7 @@
     .tripButtons{
             display: flex;
             flex-direction: row;
-            margin-bottom: 20px;
-        
+            margin-bottom: 20px;   
     }
     
     #dDate,
@@ -305,6 +303,7 @@
         margin: auto;
         padding: 10px 25px;
     }
+
     #saveTrip:hover,
     #removeTrip:hover{
         background-color: #c7d8f2;
@@ -318,11 +317,10 @@
 
     .imageSize{
         width: 80%;
-        height: 250px;
-          
-    }
-    
+        height: 250px;     
+    }  
 }
+
 @media (min-width: 768px) and (max-width: 1199px){
     .tripTitle{
         display: flex;
@@ -331,6 +329,7 @@
         justify-content: center;
         align-items: center;
     }
+
     .sectionTitle{
         display: flex;
         flex-direction: column;
@@ -342,11 +341,10 @@
         align-items: center;
         h2{
             color: #ffffff;
-            font-size: 25px;
-            
-        }
-        
+            font-size: 25px;   
+        }  
     }
+
     .card{
         display: flex;
         flex-direction: row;
@@ -360,13 +358,14 @@
         justify-content: center;
         align-items: center;
     }
+
     .cardContentRight{
         display: flex;
         flex-direction: column;
         width: 60%;
-        justify-content: center;
-        
+        justify-content: center;    
     }
+
     #city{
         display: flex;
         flex-direction: row;
@@ -385,8 +384,7 @@
     .tripButtons{
             display: flex;
             flex-direction: row;
-            margin-bottom: 20px;
-        
+            margin-bottom: 20px;     
     }
     
     #dDate,
@@ -464,6 +462,7 @@
         margin: auto;
         padding: 10px 25px;
     }
+
     #saveTrip:hover,
     #removeTrip:hover{
         background-color: #c7d8f2;
@@ -474,12 +473,13 @@
         display: flex;
         justify-content: center;
     }
+
     .imageSize{
         width: 90%;
-        height: 250px;
-        
+        height: 250px;   
     } 
 }
+
 @media (min-width: 1200px){
     .tripTitle{
         display: flex;
@@ -488,6 +488,7 @@
         justify-content: center;
         align-items: center;
     }
+
     .sectionTitle{
         display: flex;
         flex-direction: column;
@@ -499,11 +500,10 @@
         align-items: center;
         h2{
             color: #ffffff;
-            font-size: 35px;
-            
-        }
-        
+            font-size: 35px;  
+        } 
     }
+
     .card{
         display: flex;
         flex-direction: row;
@@ -515,13 +515,14 @@
         flex-direction: column;
         width: 50%;
     }
+
     .cardContentRight{
         display: flex;
         flex-direction: column;
         width: 50%;
-        justify-content: center;
-        
+        justify-content: center; 
     }
+
     #city{
         display: flex;
         flex-direction: row;
@@ -540,8 +541,7 @@
     .tripButtons{
             display: flex;
             flex-direction: row;
-            margin-bottom: 20px;
-        
+            margin-bottom: 20px;    
     }
     
     #dDate,
@@ -558,6 +558,7 @@
         border-radius: 40px;
         background-color: #ffffff;
     }
+
     .weatherTitle{
         display: flex;
         flex-direction: row;
@@ -569,6 +570,7 @@
             text-align: center;
         }
     }
+
     #weatherData{
         width: 70%;
         display: flex;
@@ -576,6 +578,7 @@
         margin: 10px auto 25px;
         text-align: center;     
     }
+
     #temp{
         display: flex;
         flex-direction: row;
@@ -601,6 +604,7 @@
             font-size: 20px;
         }
     }
+
     #saveTrip{
         display: flex;
         flex-direction: column;
@@ -626,6 +630,7 @@
         margin: auto;
         padding: 10px 25px;
     }
+
     #saveTrip:hover,
     #removeTrip:hover{
         background-color: #c7d8f2;
@@ -636,10 +641,10 @@
         display: flex;
         justify-content: center;
     }
+
     .imageSize{
         width: 80%;
-        height: 350px;
-          
+        height: 350px;     
     } 
 }
 

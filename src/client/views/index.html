@@ -25,7 +25,7 @@
                     <div class="location">
                         <label for="location">Location:</label><br>
                         <input type="text" id="location" name="location" placeholder="Enter a city name">
-                        <div id="errorMsg"></div>
+                        
                     </div>
                     <div class="empty"></div>
                     <div class="departure">
@@ -43,6 +43,7 @@
                     <button class="search" type="button" name="" value="submit"
                         onclick="return Client.search(event)">Search</button>
                 </form>
+                <div id="errorMsg"></div>
             </div>
         </div>
         <div id="hero"></div>
@@ -87,8 +88,22 @@
         </section>
 
         <section id="savedTripContainer">
-            <div >
-                <h2>Saved Trips</h2>
+            <div class="savedTripTitleContainer">
+                <div class="savedTripTitle">
+                    <h2>My saved Trips</h2>
+                </div>
+            </div>
+            <div class="savedTripcard">
+                <div class="cardContentLeft">
+                    <div id="photo"></div>
+                </div>
+                <div class="cardContentRight">
+                    <div id="destination"></div>
+                    <div class="dateInfo">
+                        <div id="departing"></div>
+                        <div id="returning"></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

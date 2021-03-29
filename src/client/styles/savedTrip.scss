@@ -1,6 +1,25 @@
 #savedTripContainer{
     display: flex;
+    flex-direction: column;   
+}
+.savedTripTitleContainer{
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.savedTripTitle{
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    background: #38747e;
+    width: 400px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+        h2{
+            color: #ffffff;
+            font-size: 35px;  
+        }
 }

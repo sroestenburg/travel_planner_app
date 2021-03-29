@@ -5,6 +5,7 @@ header {
     background-color: #07525e;
     height: 400px;
 }
+
 .header-top{
     display: flex;
     flex-direction: column;
@@ -55,10 +56,9 @@ header {
         color: #ffffff;
         font-weight: 400;
         font-size: 20px;
-    }
-   
-    
+    }   
 }
+
 /* landscape phones*/
 @media (min-width: 568px)and (max-width: 767px)and (orientation: landscape){
 
@@ -69,20 +69,20 @@ header {
         background-color: #07525e;
         height: 600px;
     }
+
     .header-top{
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 120px;
     }
+
     .title-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 100px;
-    }
-    
-    
+    } 
 }
 
 @media (min-width: 768px) and (max-width: 1199px){
@@ -93,6 +93,7 @@ header {
         background-color: #07525e;
         height: 600px;
     }
+
     .quote{
         display: flex;
         flex-direction: row;
@@ -116,15 +117,18 @@ header {
         background-color: #07525e;
         height: 600px;
     }
+
     .header-top{
         display: flex;
         flex-direction: row;
         width: 100%;
     }
+
     .title-container{
         display: flex;
         flex-direction: column;
     }
+
     .title{
         display: flex;
         flex-direction: row;
@@ -139,15 +143,13 @@ header {
         }
     }
     
-
     #hero{
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 500px;
         background-image: url('../images/hero.jpg');
-        background-size: cover;
-        
+        background-size: cover;  
     }
 
     .quote{
